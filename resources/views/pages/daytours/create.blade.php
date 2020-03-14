@@ -51,7 +51,7 @@ input[type=checkbox] {
 
             <!-- Content Column -->
             <div class="col-12 mb-4">
-                <form method="post" action="{{url('daytours')}}" enctype="multipart/form-data">
+                <form method="post" action="{{url('daytour')}}" enctype="multipart/form-data">
                     @csrf
                     <!-- Project Card Example -->
                     <div class="card shadow mb-3">
@@ -332,7 +332,7 @@ input[type=checkbox] {
                     <div class="card-body px-4 py-2">
                         <div class="d-flex flex-row-reverse">
                             <button class="btn btn-danger ml-2" type="button">Clear</button>
-                            <button class="btn btn-success ml-2" type="submit">Submit Itinerary</button>
+                            <button class="btn btn-success ml-2" type="submit">Submit Daytour</button>
                         </div>
                     </div>
                 </div>

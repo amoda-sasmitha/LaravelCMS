@@ -1,0 +1,54 @@
+/* buttons */
+
+.ch_viewall {
+  background-color: rgb(8, 141, 90);
+  /* height: 20px; */
+  color: white;
+  padding: 5px 25px 5px 25px;
+  width: 180px;
+  border-radius: 5px;
+}
+
+/* text */
+.ch_handpicked_text h3 {
+  font-size: 3rem;
+  line-height: 50px;
+}
+.ch_handpicked_text p {
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 30px;
+}
+
+/* sliders */
+
+.testImage {
+  background-repeat: no-repeat !important;
+  /* background-size: cover; */
+
+  height: 350px !important;
+  background-attachment: inherit !important;
+  background-size:cover !important;
+  background-position:center center !important;
+}
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+
+.owl-prev {
+  left: -4rem;
+
+}
+
+.owl-next {
+  right: -4rem;
+}
+.owl-next:active {
+    color: none;
+    background: none;
+  }

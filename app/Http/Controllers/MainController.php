@@ -9,9 +9,21 @@ class MainController extends Controller
 {
 
     public function index(){
-       $accommodations =  Accommodation::orderBy( 'id' , 'asc')->paginate(1);
+       $accommodations =  Accommodation::orderBy( 'id' , 'asc')->paginate(3);
        return view('pages.accommodation.index')->with( 'accommodations' , $accommodations );
     }
+
+    public function list(){
+        $accommodations =  Accommodation::orderBy( 'id' , 'asc')->get();
+        return view('pages.accommodation.accommodationlist')->with( 'accommodations' , $accommodations );
+     }
+
+    public function single_accommodation($title){
+        $title = str_replace('-',' ',$title); 
+        $accommodation =  Accommodation::where('title',$title)->first(); 
+        $related =  Accommodation::where([ ['category', '=' ,$accommodation->category] , [ 'id' , '!=' , $accommodation->id]])->limit(3)->get(); 
+        return view('pages.accommodation.single_accommodation')->with( ['accommodation' => $accommodation , 'related'=> $related] );
+     }
 
     public function create(){
         return view('pages.accommodation.create');

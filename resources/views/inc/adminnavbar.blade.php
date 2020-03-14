@@ -52,8 +52,13 @@
         </a>
         <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
+<<<<<<< HEAD
                 <a class="collapse-item"  href="{{url('itineraries')}}"><span>List of Itineraries</span></a>
                 <a class="collapse-item" href="{{url('itineraries/create')}}">  <span>Add Itineraries</span></a>
+=======
+                <a class="collapse-item"  href="{{url('itinerary')}}"><span>List of Itineraries</span></a>
+                <a class="collapse-item" href="{{url('itinerary/create')}}">  <span>Add Itineraries</span></a>
+>>>>>>> 58beab4735dc9cd5c9a5219132db2f95e5fb4726
             </div>
         </div>
     </li>
@@ -66,8 +71,8 @@
         </a>
         <div id="collapsePages3" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item"  href="{{url('daytours')}}"><span>List of Day Tours</span></a>
-                <a class="collapse-item" href="{{url('daytours/create')}}">  <span>Add Day Tours</span></a>
+                <a class="collapse-item"  href="{{url('daytour')}}"><span>List of Day Tours</span></a>
+                <a class="collapse-item" href="{{url('daytour/create')}}">  <span>Add Day Tours</span></a>
             </div>
         </div>
     </li>
@@ -81,10 +86,22 @@
         </a>
         <div id="collapsePages4" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item"  href="{{url('destinations')}}"><span>List of Destinations</span></a>
-                <a class="collapse-item" href="{{url('destinations/create')}}">  <span>Add Destinations</span></a>
+                <a class="collapse-item"  href="{{url('destination')}}"><span>List of Destinations</span></a>
+                <a class="collapse-item" href="{{url('destination/create')}}">  <span>Add Destinations</span></a>
             </div>
         </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="fa fa-sign-out "></i><span>Logout</span>
+        </a>
+        
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
+        
+        
     </li>
         
     {{-- <!-- Sidebar Toggler (Sidebar) -->

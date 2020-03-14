@@ -46,7 +46,7 @@ input[type=checkbox] {
 
             <!-- Content Column -->
             <div class="col-12 mb-4">
-                <form method="post" action="{{url('itineraries')}}" enctype="multipart/form-data">
+                <form method="post" action="{{url('itinerary')}}" enctype="multipart/form-data">
                     @csrf
                     <!-- Project Card Example -->
                     <div class="card shadow mb-3">

@@ -48,7 +48,8 @@
                             <h6><b>{{$accommodation->title}}</b><span class="ml-1 badge badge-info">{{$accommodation->category}}</span></h6>
                               <img src="{{ URL::to('/') }}/images/accommodation/covers/{{$accommodation->cover}}" class="img-fluid img-thumbnail" >
                               <div>
-                                <button type="button" class="btn btn-success btn-sm mr-1 mt-2"><b>Live Preview</b></button>
+                                <a class="btn btn-success btn-sm mr-1 mt-2" href="{{url('accommodations/'.str_slug($accommodation->title))}}"><b>Live Preview</b></a>
+                                {{-- <button type="button" class="btn btn-success btn-sm mr-1 mt-2"></button> --}}
                                 <button type="button" class="btn btn-danger btn-sm mr-1 mt-2"><b>Remove</b></button>
                                 
                               </div>

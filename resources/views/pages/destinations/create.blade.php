@@ -48,7 +48,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Add Destination</h6>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{url('destinations')}}" enctype="multipart/form-data">
+                        <form method="post" action="{{url('destination')}}" enctype="multipart/form-data">
                         @csrf
                             <div class="row">
                                 <div class="col-sm-12 pb-3">

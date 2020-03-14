@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Daytours as DaytoursModel;
 use App\PictureYourself;
+use App\TripPlans;
+use App\PlanDetails;
 
 class Daytours extends Controller
 {
@@ -14,35 +16,54 @@ class Daytours extends Controller
         return view('pages.daytours.index')->with('daytours' , $daytours );
     }
 
+    public function list(){
+        $daytours =  DaytoursModel::orderBy( 'id' , 'asc')->get();
+        return view('pages.daytours.daytourslist')->with( 'daytours' , $daytours );
+     }
+
+     public function single_daytour($title){
+        $title = str_replace('-',' ',$title); 
+        $daytour =  DaytoursModel::where('title',$title)->first(); 
+        $picture_yourself =  PictureYourself::where([ ['trip_id', '=' ,$daytour->id]])->get(); 
+        $tourplan =  DB::table('trip_plans')
+                     ->join('plan_details', 'trip_plans.id', '=', 'plan_details.trip_plan_id')
+                     ->select('plan_details.*')->where('trip_id',$daytour->id)->get();
+        return view('pages.daytours.single_daytour')->with( ['daytour' => $daytour , 'picture_yourself' => $picture_yourself , 'tourplan' => $tourplan] );
+     }
+
+
     public function create(){
         return view('pages.daytours.create');
     }
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'title' => 'required',
+        // $validatedData = $request->validate([
+        //     'title' => 'required',
             
-            'is_this_for_me' => 'required',
-             'can_it_be_tailor_made' => 'required',
-            'whentogo' => 'required',
-            'transfers' => 'required',
-            'description' => 'required',
+        //     'is_this_for_me' => 'required',
+        //      'can_it_be_tailor_made' => 'required',
+        //     'whentogo' => 'required',
+        //     'transfers' => 'required',
+        //     'description' => 'required',
 
-            'type' => 'required',
-            'looking_for' => 'required',
-            'places' => 'required',
+        //     'type' => 'required',
+        //     'looking_for' => 'required',
+        //     'places' => 'required',
 
-            'activity_one_image' => 'required',
-            'activity_one_text' => 'required',
-            'activity_two_image' => 'required',
-            'activity_two_text' => 'required',
-            'activity_three_image' => 'required',
-            'activity_three_text' => 'required',
+        //     'activity_one_image' => 'required',
+        //     'activity_one_text' => 'required',
+        //     'activity_two_image' => 'required',
+        //     'activity_two_text' => 'required',
+        //     'activity_three_image' => 'required',
+        //     'activity_three_text' => 'required',
             
-             'picture_yourself_images.*' => 'mimes:png,jpg,jpeg,gif|max:1024',      
-            'cover' => 'mimes:png,jpg,jpeg,gif|required|max:3000'
-        ]);
+        //      'picture_yourself_images.*' => 'mimes:png,jpg,jpeg,gif|max:1024',      
+        //     'cover' => 'mimes:png,jpg,jpeg,gif|required|max:3000'
+        // ]);
+
+        $activity_two_image = "";
+        $activity_three_image = "";
 
         if($request->hasfile('picture_yourself_image'))
          {
