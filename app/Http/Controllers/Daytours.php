@@ -107,6 +107,7 @@ class Daytours extends Controller
              $activity_three_image = $name;    
          }
 
+         //
         $daytour = new DaytoursModel;
         $daytour->title = $request->title;
         $daytour->transfers = $request->transfers;
