@@ -243,7 +243,7 @@
                          </div>
                      </div>
                  </nav>
-                 <div class="mobile-menu" data-logo="images/logo-wht.png"></div>
+                 <div class="mobile-menu" data-logo="{{asset('images/main/logo.jpg')}}"></div>
              </div>
          </div>
          <!-- End-Menu-area-->

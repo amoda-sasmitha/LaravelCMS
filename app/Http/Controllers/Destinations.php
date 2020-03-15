@@ -17,16 +17,22 @@ class Destinations extends Controller
         return view('pages.destinations.create');
     }
 
+    public function details($title){
+        $title = str_replace('-',' ',$title); 
+        $destination = DestinationModel::where('title' , $title)->first();
+        return view('pages.destinations.details')->with('destination' , $destination );
+    }
+
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-             'images' => 'required',
-            'cover' => 'required',
-            'images.*' => 'mimes:png,jpg,jpeg,gif|max:2048',      
-            'cover' => 'mimes:png,jpg,jpeg,gif|required|max:5000'
-        ]);
+        // $validatedData = $request->validate([
+        //     'title' => 'required',
+        //     'description' => 'required',
+        //      'images' => 'required',
+        //     'cover' => 'required',
+        //     'images.*' => 'mimes:png,jpg,jpeg,gif|max:2048',      
+        //     'cover' => 'mimes:png,jpg,jpeg,gif|required|max:5000'
+        // ]);
 
         if($request->hasfile('images'))
          {

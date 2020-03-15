@@ -757,7 +757,7 @@ header .header_top_area .contact_wrapper_top .book-btn:hover {
 		display: none;
 	}
 	.slicknav_nav {
-		background: #212121;
+		background: #fff;
 		position: relative;
 		top: 0px;
 		padding: 10px 0;
@@ -768,6 +768,7 @@ header .header_top_area .contact_wrapper_top .book-btn:hover {
 	}
 	.slicknav_nav a {
 		font-size: 15px;
+		color : black !important;
 	}
 	.slicknav_nav .slicknav_row:hover,
 	.slicknav_nav a:hover {

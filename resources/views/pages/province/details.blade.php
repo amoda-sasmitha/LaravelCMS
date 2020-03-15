@@ -16,7 +16,7 @@
 </section>
 <!-- End-banner-area -->
 <!-- Start-Package-Section -->
-<section class="my-4 bg-white">
+<section class="mt-4 bg-white">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -25,26 +25,33 @@
         </div>
     </div>
 </section>
-{{-- <section class="py-4 bg-gray">
+<section class="pb-4 bg-white">
     <div class="container">
-        <div class="row masonry-item">
-        @if ( count($provinces) > 0 )
-            @foreach ($provinces as $province)
+        <div class="row">
+        @if ( count($destinations) > 0 )
+        <div class="col-sm-12">
+            <h3 class="text-dark pb-2">Destinations</h3>
+        </div>
+            @foreach ($destinations as $destination)
             <!-- item -->
-            <div class="col-lg-4 col-md-6 col-sm-12 masonry mt-3 ">
-                <div class="shadow">
-                    <div class="aslideImages" style="background-image: url('{{ URL::to('/') }}/images/provinces/{{$province->cover}}');">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3 ">
+                <a href="{{url('destinations/'.str_slug($destination->title))}}">
+                <div class="shadow h-100 card border-0">
+                    <div class="aslideImages" style="background-image: url('{{ URL::to('/') }}/images/destinations/covers/{{$destination->cover}}');">
                     </div>
                     <div class="package-content bg-white p-3">
-                        <h3><a href="#">{{$province->name}} </a></h3>
+                    <h4><a href="{{url('destinations/'.str_slug($destination->title))}}">{{$destination->title}} </a> 
+                        <span class="badge badge-success mx-2 px-2">{{$destination->district}} District</span>
+                    </h4>
                     </div>
                 </div>
+                </a>
             </div>
             <!-- Item End -->
             @endforeach
             @endif
         </div>
     </div>
-</section> --}}
+</section>
 @include('inc.defaultfooter')
 @endsection

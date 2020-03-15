@@ -15,7 +15,10 @@
                 <div class="row justify-content-lg-center">
                     <div class="col-lg-10 text-center">
                         <div class="hero-slider__content">
+                            <center>
                             <h2 class="hero-slider__title">Discover Sri Lanka</h2>
+                            </center>
+                           
                             {{-- <p class="hero-slider__text">Et ea invidunt magna dolores ut et magna eos sit erat.
                                 Dolor et kasd takimata no duo gubergren justo ut nonumy, voluptua accusam at clita
                                 ut. Rebum clita accusam nonumy.</p>  --}}
@@ -30,44 +33,56 @@
                 <div class="container">
                         <br>
                         <!--Search Form-->
-                        <form  action="{{url('search')}}" method="post" class=" row search_area-inner type-form-four homepage_main_search_title"
+                        <form  action="{{url('search')}}" method="get" class=" row search_area-inner type-form-four homepage_main_search_title"
                          style=" width: 80%;   background: rgba(255, 255, 255, 0.836); border-radius: 45px; ">
                          @csrf 
                          <div class="form-group icon_down">
-                            <select class="selectpicker search-fields form-control">
-                                <option value="0"> An Individual </option>
-                                <option value="1"> A Family</option>
-                                <option value="2"> A Couple</option>
-                                <option value="3"> A Company</option>
-                                <option value="4"> A Group</option>
+                            <select name="type" class="selectpicker search-fields form-control">
+                                <option value="An Individual"> An Individual </option>
+                                <option value="A Family"> A Family</option>
+                                <option value="A Couple"> A Couple</option>
+                                <option value="A Group"> A Company</option>
+                                <option value="A Company"> A Group</option>
                             </select>
                         </div>
 
                         <div class="form-group icon_down">
-                            <select class="selectpicker search-fields form-control">
-                                <option value="0"> Adventure </option>
-                                <option value="1"> Beach Tour</option>
-                                <option value="2"> Cultural Tour</option>
-                                <option value="3"> Family</option>
-                                <option value="5"> Heli Tours</option>
-                                <option value="6"> Luxury Tours</option>
-                                <option value="7"> Rail Tours</option>
-                                <option value="8"> Ramayana Tours</option>
-                                <option value="9"> Relax Tour</option>
-                                <option value="10">Round Tours</option>
-                                <option value="11">Golf Tours</option>
-                                <option value="12">Wedding Planning</option>
-                                <option value="13">Honeymoon Tour</option>
-                                <option value="14">Gem Tour</option>
+                            <select name="lookingfor" class="selectpicker search-fields form-control">
+                                <option value="Adventure"> Adventure </option>
+                                <option value="Cultural Tour"> Cultural Tour</option>
+                                <option value="Family"> Family</option>
+                                <option value="Heli Tours"> Heli Tours</option>
+                                <option value="Luxury Tours"> Luxury Tours</option>
+                                <option value="Honeymoon Tour">Honeymoon Tour</option>
                             </select>
                         </div>
                         <div class="form-group icon_down">
-                            <select class="selectpicker search-fields form-control">
-                                <option value="0"> Ampara </option>
-                                <option value="1"> Galle </option>
-                                <option value="2"> Mathara</option>
-                                <option value="3"> Colombo</option>
-                                <option value="4"> Kandy</option>
+                            <select name="place"  class="selectpicker search-fields form-control">
+                                <option value="Ampara"> Ampara </option>
+                                <option value="Anuradhapura"> Anuradhapura </option>
+                                <option value="Badulla"> Badulla </option>
+                                <option value="Batticaloa"> Batticaloa </option>
+                                <option value="Colombo"> Colombo </option>
+                                <option value="Galle"> Galle </option>
+                                <option value="Gampaha"> Gampaha </option>
+                                <option value="Hambantota"> Hambantota </option>
+                                <option value="Jaffna"> Jaffna </option>
+                                <option value="Kalutara"> Kalutara </option>
+                                <option value="Kandy"> Kandy </option>
+                                <option value="Kegalle"> Kegalle </option>
+                                <option value="Kilinochchi"> Kilinochchi </option>
+                                <option value="Kurunegala"> Kurunegala </option>
+                                <option value="Mannar"> Mannar </option>
+                                <option value="Matara"> Matara </option>
+                                <option value="Monaragala"> Monaragala </option>
+                                <option value="Mullaitivu"> Mullaitivu </option>
+                                <option value="Nuwara Eliya"> Nuwara Eliya </option>
+                                <option value="Polonnaruwa"> Polonnaruwa </option>
+                                <option value="Puttalam"> Puttalam </option>
+                                <option value="Ratnapura"> Ratnapura </option>
+                                <option value="Trincomalee"> Trincomalee </option>
+                                <option value="Vavuniya"> Vavuniya</option>
+                                
                             </select>
                         </div>
                         <!-- <div class="form-group">

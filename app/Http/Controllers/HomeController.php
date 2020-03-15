@@ -41,8 +41,16 @@ class HomeController extends Controller
     }
 
     public function search(Request $request){
-        $itineraries =  Itineraries::orderBy( 'id' , 'desc')->limit(5)->get();
-        $params = [ 'itineraries' => $itineraries ];
+
+           
+            $itineraries =  Itineraries::where( 'type', 'LIKE', '%'.$request->type.'%')
+                                        ->where('looking_for', 'LIKE', '%'.$request->lookingfor.'%')
+                                        ->where('places', 'LIKE', '%'.$request->place.'%')->get();
+       
+             $daytours = Daytours::where( 'type', 'LIKE', '%'.$request->type.'%')
+                                 ->where('looking_for', 'LIKE', '%'.$request->lookingfor.'%')
+                                 ->where('places', 'LIKE', '%'.$request->place.'%')->get();
+         $params = [ 'itineraries' => $itineraries , 'daytours' => $daytours ];
         return view('pages.home.search')->with($params);
     }
 }

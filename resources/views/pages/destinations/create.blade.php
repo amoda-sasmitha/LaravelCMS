@@ -59,15 +59,15 @@
                                 <div class="col-sm-6 pb-3">
                                     <h3 class="small font-weight-bold">Destination Province </h3>
                                     <select class="form-control" id="province" name="province">
-                                        <option selected value="1">Western Province</option>
-                                        <option value="2">Southern Province</option>
-                                        <option value="3">Central Province</option>
-                                        <option value="4">Eastern Province</option>
+                                        <option selected value="9">Western Province</option>
+                                        <option value="7">Southern Province</option>
+                                        <option value="1">Central Province</option>
+                                        <option value="3">Eastern Province</option>
                                         <option value="5">Northern Province</option>
-                                        <option value="6">North Western Province</option>
-                                        <option value="7">North Central Province</option>
+                                        <option value="4">North Western Province</option>
+                                        <option value="2">North Central Province</option>
                                         <option value="8">Uva Province</option>
-                                        <option value="9">Sabaragamuwa Province</option>
+                                        <option value="6">Sabaragamuwa Province</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-6 pb-3">
@@ -208,15 +208,15 @@
 
 
         var data = {
-            1 : ["Colombo", "Gampaha", "Kalutara"],
-            2 : ["Galle", "Matara", "Hambantota"],
-            3 : ["Kandy", "Matale", "Nuwara Eliya"],
-            4 : ["Trincomalee", "Batticaloa", "Ampara"],
+            9 : ["Colombo", "Gampaha", "Kalutara"],
+            7 : ["Galle", "Matara", "Hambantota"],
+            1 : ["Kandy", "Matale", "Nuwara Eliya"],
+            3 : ["Trincomalee", "Batticaloa", "Ampara"],
             5 : ["Jaffna", "Kilinochchi", "Mannar" ,"Mullaitivu" , "Vavuniya"],
-            6 : ["Puttalam", "Kurunegala"],
-            7 : ["Anuradhapura", "Polonnaruwa"],
+            4 : ["Puttalam", "Kurunegala"],
+            2 : ["Anuradhapura", "Polonnaruwa"],
             8 : ["Badulla", "Monaragala"],
-            9 : ["Kegalle", "Ratnapura"],
+            6 : ["Kegalle", "Ratnapura"],
         }
 
         jQuery(document).on('change', '#province', function () {

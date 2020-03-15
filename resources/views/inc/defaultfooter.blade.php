@@ -10,7 +10,7 @@
                     
                     <table style="width:100%">
                         <tr>
-                            <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td>
+                            {{-- <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td> --}}
                             <td class="p-0.5 ">  <a href="{{url('/accommodations')}}"  style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
                            
                         </tr>
@@ -30,7 +30,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-5 col-sm-12">
+            {{-- <div class="col-lg-2 col-md-5 col-sm-12">
                 <div class="footer-widget">
                     <div class="title mb-3">
                         <h3 style="color: white; font-size: 1rem;">Itineraries</h3>
@@ -38,7 +38,7 @@
                     
                     <table style="width:100%">
                         <tr>
-                            <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td>
+                            <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td> 
                            
                            
                         </tr>
@@ -56,7 +56,7 @@
                            
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="" style="color: white; font-size: 0.75rem;">Travel Tips  </a></td>
+                             <td class="p-0.5 ">  <a href="" style="color: white; font-size: 0.75rem;">Travel Tips  </a></td> 
                            
                             
                         </tr>
@@ -76,7 +76,7 @@
     
                     </table>
                 </div>
-            </div>
+            </div> 
             <div class="col-lg-2 col-md-5 col-sm-12">
                 <div class="footer-widget">
                     <div class="title mb-3">
@@ -84,7 +84,7 @@
                     </div>
                     <table style="width:100%">
                         <tr>
-                            <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td>
+                             <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td> 
                         </tr>
                         <tr>
                             <td class="p-0.5 ">  <a href="{{url('/accommodations')}}" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
@@ -110,7 +110,7 @@
                         </tr>
                     </table>
                 </div>
-            </div>
+            </div> --}}
             <div class="col-lg-4 col-md-7 col-sm-12">
                 <div class="footer-widget">
                     <div class="title mb-3">

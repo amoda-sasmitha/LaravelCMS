@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Provinces;
+use App\Destinations;
 
 class ProvincesController extends Controller
 {
@@ -15,7 +16,8 @@ class ProvincesController extends Controller
     public function details($title){
         $title = str_replace('-',' ',$title); 
         $details =  Provinces::where('name',$title)->first();
-        return view('pages.province.details')->with('details' , $details );
+        $destinations = Destinations::where( 'province_id' , $details->id )->get();
+        return view('pages.province.details')->with( ['details' => $details , 'destinations' => $destinations ] );
     }
 
 }
