@@ -7,7 +7,7 @@
     <div class="item">
 
         <video class="filterVideo" autoplay="autoplay" muted="muted" preload="auto" loop>
-            <source src="./videos/videoplayback.mp4"
+            <source src="https://res.cloudinary.com/lucidex/video/upload/v1583985444/travelsite/videoplayback_lqy7ys.mp4"
                 type="video/mp4">
         </video>
         <div class="hero-slider__content-wrapper">
@@ -31,7 +31,7 @@
                         <br>
                         <!--Search Form-->
                         <form class=" row search_area-inner type-form-four homepage_main_search_title"
-                         style=" width: 80%;   background: rgba(255, 255, 255, 0.836); border-radius: 60px; ">
+                         style=" width: 80%;   background: rgba(255, 255, 255, 0.836); border-radius: 45px; ">
                             <div class="form-group icon_down">
                             <select class="selectpicker search-fields form-control">
                                 <option value="0"> An Individual </option>
@@ -97,7 +97,7 @@
             <center>
             <p>Our team of expert travel consultants have selected a few from our wide range of themed tour itineraries that we believe will offer you an unforgettable holiday in Sri Lanka. </p><p class="mobilevirew_hide" style="text-align: center;"> For those who have different holiday preferences in Sri Lanka, we cater to tailor-made itineraries as per your requests. So do not hesitate to let us know if you need a special itinerary made just for you.</p>
              </center>
-            <a  class=" btn btn-sucess btn-md font-weight-bold" href="package-grid.html">View All</a>
+            <a  class="btn btn-success btn-md font-weight-bold" style="background-color: #fb9827; border: none" href="{{url('/itineraries')}}" >View All</a>
                         <div class="row mt-4 px-md-5">
                             <div class="col-lg-12">
                                 <div class="destination-slide ">
@@ -199,7 +199,7 @@
                     <p class="mobilevirew_hide" style="text-align: center;">With the customer’s best interest in mind at all times, we have a strict code of ethics that we follow in providing travel consultation services. Hence you do not have to worry about trusting us with your Sri Lanka tour requirements. We have extensive knowledge in the tourism industry and are equipped with the necessary tools to provide the best quality of service to our clients. Our team of committed travel consultants will go the extra mile to meet your travel needs. </p>
              
                     <center> 
-                    <a href="aboutus.html" class="custom_btn read-btn" >Read More</a> 
+                    <a href="{{url('/our-story')}}"  class="custom_btn read-btn" >Read More</a> 
                 </center>   
                 </div>
             </div>
