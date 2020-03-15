@@ -46,12 +46,12 @@
 <!-- Start-Package-Section -->
 <section class="py-5 bg-gray">
  <div class="container">
-     <div class="row masonry-item">
+     <div class="row">
         @if( count($daytours) > 0 )
         @foreach ($daytours as $daytour) 
          <!-- item -->
-         <div class="col-lg-4 col-md-6 col-sm-12 masonry" data-aos="fade-up">
-             <div class="package-one">
+         <div class="col-lg-4 col-md-6 col-sm-12 mb-3" data-aos="fade-up">
+             <div class="package-one h-100 card border-0">
                 <a href="{{url('daytours/'.str_slug($daytour->title))}}">
                     <div class="aslideImages"
                         style="background-image: url({{ URL::to('/') }}/images/daytours/covers/{{$daytour->cover}});">

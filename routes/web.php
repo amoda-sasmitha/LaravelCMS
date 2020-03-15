@@ -77,5 +77,7 @@ Auth::routes([
 
 
 
-Route::get('/discover-sri-lanka', 'ProvincesController@index');
-Route::get('/discover-sri-lanka/{title}', 'ProvincesController@details');
+Route::get('discover-sri-lanka', 'ProvincesController@index');
+Route::get('discover-sri-lanka/{title}', 'ProvincesController@details');
+
+Route::post('search',  'HomeController@search'  );

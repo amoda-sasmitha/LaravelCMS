@@ -30,9 +30,10 @@
                 <div class="container">
                         <br>
                         <!--Search Form-->
-                        <form class=" row search_area-inner type-form-four homepage_main_search_title"
+                        <form  action="{{url('search')}}" method="post" class=" row search_area-inner type-form-four homepage_main_search_title"
                          style=" width: 80%;   background: rgba(255, 255, 255, 0.836); border-radius: 60px; ">
-                            <div class="form-group icon_down">
+                         @csrf 
+                         <div class="form-group icon_down">
                             <select class="selectpicker search-fields form-control">
                                 <option value="0"> An Individual </option>
                                 <option value="1"> A Family</option>
@@ -97,10 +98,10 @@
             <center>
             <p>Our team of expert travel consultants have selected a few from our wide range of themed tour itineraries that we believe will offer you an unforgettable holiday in Sri Lanka. </p><p class="mobilevirew_hide" style="text-align: center;"> For those who have different holiday preferences in Sri Lanka, we cater to tailor-made itineraries as per your requests. So do not hesitate to let us know if you need a special itinerary made just for you.</p>
              </center>
-            <a  class=" btn btn-sucess btn-md font-weight-bold" href="package-grid.html">View All</a>
+            <a  class=" btn btn-success px-4 font-weight-bold" href="{{url('itineraries')}}">View All</a>
                         <div class="row mt-4 px-md-5">
                             <div class="col-lg-12">
-                                <div class="destination-slide ">
+                                <div class="destination-slide  ">
                                     @if ( count($itineraries) > 0 )
                                         @foreach ($itineraries as $item)                                
                                             <!-- item -->
@@ -199,7 +200,7 @@
                     <p class="mobilevirew_hide" style="text-align: center;">With the customer’s best interest in mind at all times, we have a strict code of ethics that we follow in providing travel consultation services. Hence you do not have to worry about trusting us with your Sri Lanka tour requirements. We have extensive knowledge in the tourism industry and are equipped with the necessary tools to provide the best quality of service to our clients. Our team of committed travel consultants will go the extra mile to meet your travel needs. </p>
              
                     <center> 
-                    <a href="aboutus.html" class="custom_btn read-btn" >Read More</a> 
+                    <a href="{{url('our-story')}}" class="custom_btn read-btn" >Read More</a> 
                 </center>   
                 </div>
             </div>
@@ -397,7 +398,7 @@
             @if ( count($accommodation) > 0 )
                     @foreach ($accommodation as $item)   
             <!-- item -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div class="package-one blog-box" style="height: 500px;">
                     <div class="img-wapper">
                         <img style="height: 200px;" src="{{ URL::to('/') }}/images/accommodation/covers/{{$item->cover}}" alt="Leopard Holiday">

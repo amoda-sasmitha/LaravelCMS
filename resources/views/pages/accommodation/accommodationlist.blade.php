@@ -38,12 +38,12 @@
                     </div>
                 </div>
         </div> --}}
-        <div class="row masonry-item pt-4">
+        <div class="row  pt-4">
             @if( count($accommodations) > 0 )
                 @foreach ($accommodations as $accommodation) 
                     <!-- item -->
-                    <div class="col-lg-6 col-md-6 col-sm-12 masonry "  {{--data-aos="fade-up" --}} >
-                        <div class="package-one">
+                    <div class="col-lg-6 col-md-6 col-sm-12  mb-3"  data-aos="fade-up" >
+                        <div class="package-one h-100 card border-0">
                             <a href="{{url('accommodations/'.str_slug($accommodation->title))}}">
                                 <div class="bslideImages"
                                     style="background-image: url('{{ URL::to('/') }}/images/accommodation/covers/{{$accommodation->cover}}'); ">
