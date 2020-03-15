@@ -7,7 +7,7 @@
     <div class="item">
 
         <video class="filterVideo" autoplay="autoplay" muted="muted" preload="auto" loop>
-            <source src="./videos/videoplayback.mp4"
+            <source src="https://res.cloudinary.com/lucidex/video/upload/v1583985444/travelsite/videoplayback_lqy7ys.mp4"
                 type="video/mp4">
         </video>
         <div class="hero-slider__content-wrapper">
@@ -31,7 +31,7 @@
                         <br>
                         <!--Search Form-->
                         <form  action="{{url('search')}}" method="post" class=" row search_area-inner type-form-four homepage_main_search_title"
-                         style=" width: 80%;   background: rgba(255, 255, 255, 0.836); border-radius: 60px; ">
+                         style=" width: 80%;   background: rgba(255, 255, 255, 0.836); border-radius: 45px; ">
                          @csrf 
                          <div class="form-group icon_down">
                             <select class="selectpicker search-fields form-control">
@@ -200,7 +200,7 @@
                     <p class="mobilevirew_hide" style="text-align: center;">With the customer’s best interest in mind at all times, we have a strict code of ethics that we follow in providing travel consultation services. Hence you do not have to worry about trusting us with your Sri Lanka tour requirements. We have extensive knowledge in the tourism industry and are equipped with the necessary tools to provide the best quality of service to our clients. Our team of committed travel consultants will go the extra mile to meet your travel needs. </p>
              
                     <center> 
-                    <a href="{{url('our-story')}}" class="custom_btn read-btn" >Read More</a> 
+                    <a href="{{url('/our-story')}}"  class="custom_btn read-btn" >Read More</a> 
                 </center>   
                 </div>
             </div>

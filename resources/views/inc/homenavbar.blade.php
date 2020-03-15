@@ -192,7 +192,7 @@
          <div class="header-fixed header-one">
              <div class="container-fluid" style="max-width: 1820px;"> 
                  <nav class="navbar navbar-expand-lg navbar-light">
-                     <a class="navbar-brand" href="home.html">
+                     <a class="navbar-brand" href="{{url('/')}}">
                         <img src="{{asset('images/main/logo.jpg')}}" alt="logo">
                      </a>
                      <div class="collapse navbar-collapse my-lg-0" id="navbarNav">

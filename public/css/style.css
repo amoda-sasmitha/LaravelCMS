@@ -914,6 +914,21 @@ main.hero-slide .slick-dots {
 		top: 100%;
 	}
 }
+@media screen and (max-width: 600px) {
+	.hero-slider__content-wrapper {
+		position: absolute;
+		display: block;
+		/* top: 40%; */
+		transform: translateY(-50%);
+		left: 0;
+		z-index: 5;
+		width: 100%;
+
+	}
+	.filterVideo{
+		height: 100vh !important;
+	}
+}
 /*--------- Index-two-main ----------*/
 
 .header_top_area.type-two {

@@ -11,21 +11,21 @@
                     <table style="width:100%">
                         <tr>
                             <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td>
-                            <td class="p-0.5 ">  <a href="accommodations.html" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
+                            <td class="p-0.5 ">  <a href="{{url('/accommodations')}}"  style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
                            
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="" style="color: white; font-size: 0.75rem;">Itineraries  </a></td>
-                            <td class="p-0.5 ">  <a href="aboutus.html" style="color: white; font-size: 0.75rem;">About  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/itineraries')}}"  style="color: white; font-size: 0.75rem;">Itineraries  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/our-story')}}" style="color: white; font-size: 0.75rem;">About  </a></td>
                         </tr>
                         <tr>
                             <td class="p-0.5 ">  <a href="" style="color: white; font-size: 0.75rem;">Travel Tips  </a></td>
-                            <td class="p-0.5 ">  <a href="daytours-grid.html" style="color: white; font-size: 0.75rem;">Day Tours  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/daytours')}}" style="color: white; font-size: 0.75rem;">Day Tours  </a></td>
                            
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="discover-srilanka.html" style="color: white; font-size: 0.75rem;">Discover Sri Lanka  </a></td>
-                            <td class="p-0.5 ">  <a href="contact.html" style="color: white; font-size: 0.75rem;">Contact Us  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/discover-sri-lanka')}}"  style="color: white; font-size: 0.75rem;">Discover Sri Lanka  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/contact-us')}}"  style="color: white; font-size: 0.75rem;">Contact Us  </a></td>
                         </tr>
                     </table>
                 </div>
@@ -43,16 +43,16 @@
                            
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="accommodations.html" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
+                            <td class="p-0.5 ">  <a href="{{url('/accommodations')}}" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
                            
                            
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="" style="color: white; font-size: 0.75rem;">Itineraries  </a></td>
-                           
+                            <td class="p-0.5 ">  <a href="{{url('/itineraries')}}" style="color: white; font-size: 0.75rem;">Itineraries  </a></td>
+                            
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="aboutus.html" style="color: white; font-size: 0.75rem;">About  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/our-story')}}" style="color: white; font-size: 0.75rem;">About  </a></td>
                            
                         </tr>
                         <tr>
@@ -61,16 +61,16 @@
                             
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="daytours-grid.html" style="color: white; font-size: 0.75rem;">Day Tours  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/daytours')}}" style="color: white; font-size: 0.75rem;">Day Tours  </a></td>
                            
                             
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="discover-srilanka.html" style="color: white; font-size: 0.75rem;">Discover Sri Lanka  </a></td>
+                            <td class="p-0.5 ">  <a  href="{{url('/discover-sri-lanka')}}" style="color: white; font-size: 0.75rem;">Discover Sri Lanka  </a></td>
                           
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="contact.html" style="color: white; font-size: 0.75rem;">Contact Us  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/contact-us')}}" style="color: white; font-size: 0.75rem;">Contact Us  </a></td>
                           
                         </tr>
     
@@ -87,25 +87,25 @@
                             <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td>
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="accommodations.html" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
+                            <td class="p-0.5 ">  <a href="{{url('/accommodations')}}" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="" style="color: white; font-size: 0.75rem;">Itineraries  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/itineraries')}}" style="color: white; font-size: 0.75rem;">Itineraries  </a></td>
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="aboutus.html" style="color: white; font-size: 0.75rem;">About  </a></td>   
+                            <td class="p-0.5 ">  <a href="{{url('/our-story')}}" style="color: white; font-size: 0.75rem;">About  </a></td>   
                         </tr>
                         <tr>
                             <td class="p-0.5 ">  <a href="" style="color: white; font-size: 0.75rem;">Travel Tips  </a></td>                              
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="daytours-grid.html" style="color: white; font-size: 0.75rem;">Day Tours  </a></td>                              
+                            <td class="p-0.5 ">  <a href="{{url('/daytours')}}"   style="color: white; font-size: 0.75rem;">Day Tours  </a></td>                              
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="discover-srilanka.html" style="color: white; font-size: 0.75rem;">Discover Sri Lanka  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/discover-sri-lanka')}}" style="color: white; font-size: 0.75rem;">Discover Sri Lanka  </a></td>
                         </tr>
                         <tr>
-                            <td class="p-0.5 ">  <a href="contact.html" style="color: white; font-size: 0.75rem;">Contact Us  </a></td>
+                            <td class="p-0.5 ">  <a href="{{url('/contact-us')}}" style="color: white; font-size: 0.75rem;">Contact Us  </a></td>
                           
                         </tr>
                     </table>
