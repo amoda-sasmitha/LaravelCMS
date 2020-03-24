@@ -159,7 +159,7 @@
     }
     </style>
      <!-- Preloader -->
-     <div id="preloader"></div>
+     {{-- <div id="preloader"></div> --}}
      <!-- Start-Header-Section -->
      <header class="header-type-three">
            <!-- Topbar-start-area -->

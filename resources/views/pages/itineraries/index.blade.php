@@ -59,8 +59,8 @@
                                    min-height: 250px; background-size: cover; background-position-y: center;"> 
                                     </div>
                                 <div>
-                                    <a href="#" class="btn btn-success btn-sm mr-1 mt-2"><b>Live Preview</b></a>
-                                    <a href="#" class="btn btn-danger btn-sm mr-1 mt-2"><b>Remove</b></a>
+                                    <a href="{{url('itineraries/'.str_slug($itinerary->title))}}" class="btn btn-success btn-sm mr-1 mt-2"><b>Live Preview</b></a>
+                                    <button type="button" data-id="{{$itinerary->id}}"  class="btn btn-danger btn-sm mr-1 mt-2 delete"><b>Remove</b></button>
                                     <a href="{{ URL::to('/')}}/tripplan/create/{{$itinerary->id}}" class="btn btn-info btn-sm  mt-2"><b>Create Trip Plan</b></a>
                                 </div>
                                 </div>
@@ -142,7 +142,32 @@
 
     </div>
     <!-- End of Main Content -->
+ {{-- Delete modal --}}
+ <div id="applicantDeleteModal" class="modal modal-danger fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:55%;">
+        <div class="modal-content">
+             <form action="{{url('itinerary')}}" method="POST" class="remove-record-model">
+            @method('delete')
+            @csrf
 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+               
+            </div>
+            <div class="modal-body">
+                <h6>Are you sure you want delete this record ?</h6>
+                <input type="hidden" name="id" id="app_id">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-danger waves-effect remove-data-from-delete-form">Delete</button>
+            </div>
+
+             </form>
+        </div>
+    </div>
+</div>
+ {{-- Delete modal --}}
     <!-- Footer -->
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -165,4 +190,11 @@
 </a>
 
 
+<script>
+    $(document).on('click','.delete',function(){
+        var userID=$(this).attr('data-id');
+        $('#app_id').val(userID); 
+        $('#applicantDeleteModal').modal('show'); 
+    });
+    </script>
 @endsection

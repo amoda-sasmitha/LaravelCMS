@@ -8,6 +8,8 @@ use App\Places;
 use App\Itineraries;
 use App\Daytours;
 use App\Destinations;
+use App\Booking;
+use App\ContactUs;
 
 class HomeController extends Controller
 {
@@ -28,7 +30,10 @@ class HomeController extends Controller
      */
     public function adminindex()
     {
-        return view('home');
+        $bookings =  Booking::orderBy( 'id' , 'desc')->paginate(10);
+        $contactus =  ContactUs::orderBy( 'id' , 'desc')->get();
+        $params = [ 'bookings' => $bookings  , 'contactus' => $contactus ];
+        return view('home')->with($params);
     }
 
     public function index(){

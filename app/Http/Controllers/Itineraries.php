@@ -159,4 +159,12 @@ class Itineraries extends Controller
 
         return back()->with('success', "You post has been saved to database" );
     }
+
+    public function destroy(Request $request){
+        $id=$request->input('id');
+        $picture_yourself = PictureYourself::where('trip_id',$id)->delete();
+        $places = Places::where('trip_id',$id)->delete();
+        ItineraryModel::destroy($id);
+        return back()->with('success', "You post has been deleted successfully" );
+    }
 }

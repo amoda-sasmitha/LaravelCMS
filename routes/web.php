@@ -19,21 +19,25 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('accommodation',  'MainController@index'  );
     Route::get('accommodation/tags/{query}',  'MainController@tags'  );
     Route::post('accommodation',  'MainController@store'  );
+    Route::delete('accommodation',  'MainController@destroy'  );
 
     //itineraries
     Route::get('itinerary/create',  'Itineraries@create'  );
     Route::get('itinerary',  'Itineraries@index'  );
     Route::post('itinerary',  'Itineraries@store'  );
+    Route::delete('itinerary',  'Itineraries@destroy'  );
 
     //daytour
     Route::get('daytour/create',  'Daytours@create'  );
     Route::get('daytour',  'Daytours@index'  );
     Route::post('daytour',  'Daytours@store'  );
+    Route::delete('daytour',  'Daytours@destroy'  );
 
     //destinations
     Route::get('destination/create',  'Destinations@create'  );
     Route::get('destination',  'Destinations@index'  );
     Route::post('destination',  'Destinations@store'  );
+    Route::delete('destination',  'Destinations@destroy'  );
     
     //tripplans
     Route::get('tripplan/create/{trip_id}',  'TripPlan@create'  );
@@ -49,6 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
 //public accommodations
 Route::get('accommodations',  'MainController@list'  );
 Route::get('accommodations/{title}',  'MainController@single_accommodation'  );
+Route::get('accommodations',  'MainController@list'  );
 
 //public itineraries
 Route::get('itineraries/',  'Itineraries@list'  );
@@ -82,3 +87,6 @@ Route::get('discover-sri-lanka/{title}', 'ProvincesController@details');
 
 Route::get('destinations/{title}' , 'Destinations@details');
 Route::get('search',  'HomeController@search'  );
+
+Route::post('booking', 'BookingController@store');
+Route::post('contactus', 'BookingController@contactus');

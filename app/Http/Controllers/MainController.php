@@ -79,4 +79,14 @@ class MainController extends Controller
     
         return back()->with('success', "You post has been saved to database" );
     }
+
+    public function destroy(Request $request){
+        $id=$request->input('id');
+        var_dump($id);
+        Accommodation::destroy($id);
+        return back()->with('success', "You post has been deleted successfully" );
+    }
+
+
+
 }

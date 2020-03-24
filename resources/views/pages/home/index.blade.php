@@ -122,11 +122,11 @@
                                             <!-- item -->
                                             <div class="item">
                                                 <a href="{{url('itineraries/'.str_slug($item->title))}}" >
-                                                <div class="place-box">
+                                                <div class="place-box  ">
                                                     <div class=" slideImages" style="background-image: url('{{ URL::to('/') }}/images/itineraries/covers/{{$item->cover}}');  ">
                                                     </div>
                                                     <div class="desi-inner">
-                                                        <h4>{{$item->title}}</h4>
+                                                        <h4 class="nowrap"> {{$item->title}}</h4>
                                                     </div>
                                                 </div>
                                                 </a>
@@ -236,7 +236,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="counter-box">
                     <span class="count-icon"><i class="fas fa-user"></i></span>
-                    <h2 class="counter">2240</h2>
+                    <h2 class="counter">1000</h2>
                     <h3 class="count-title">Customers</h3>
                 </div>
             </div>
@@ -244,7 +244,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="counter-box">
                     <span class="count-icon"><i class="fas fa-umbrella-beach"></i></span>
-                    <h2 class="counter">540</h2>
+                    <h2 class="counter">250</h2>
                     <h3 class="count-title">Destination</h3>
                 </div>
             </div>
@@ -252,7 +252,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="counter-box">
                     <span class="count-icon"><i class="fas fa-luggage-cart"></i></span>
-                    <h2 class="counter">3340</h2>
+                    <h2 class="counter">300</h2>
                     <h3 class="count-title">Tours</h3>
                 </div>
             </div>
@@ -260,7 +260,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="counter-box">
                     <span class="count-icon"><i class="fas fa-life-ring"></i></span>
-                    <h2 class="counter">240</h2>
+                    <h2 class="counter">250</h2>
                     <h3 class="count-title">Support Cases</h3>
                 </div>
             </div>
@@ -275,27 +275,29 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="center-title ">
+                <div class="center-title " style="padding-bottom : 0px !important;">
                     <h2 class="title">Popular Destinations</h2>
                     <!-- <h4 class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua minim veniam.</h4> -->
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-12">
                 <div class="destination-slide">
                     @if( count($destinations) > 0 )
                         @foreach ($destinations as $item)
                         <!-- item -->
-                        <div class="item">
-                            <div class="place-box">
-                                <div class="">
-                                    <img src="{{ URL::to('/') }}/images/destinations/covers/{{$item->cover}}" alt="">
+                        <div class="item shadow h-100 card border-0" >
+                            <div class="place-box  ">
+                                <a href="{{url('destinations/'.str_slug($item->title))}}">
+                                <div style="background-image : url({{asset('images/destinations/covers')}}/{{$item->cover}});background-size:cover; height : 180px; ">
+                                
                                 </div>
-                                <div class="desi-inner">
-                                    <h4>{{$item->title}} </h4>
+                                <div class="px-2 py-3">
+                                    <h4 class="nowrap text-center">{{$item->title}}</h4>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <!-- item end -->
@@ -421,8 +423,7 @@
                     <div class="package-content">
                     <h3><a href="{{url('accommodations/'.str_slug($item->title))}}" >{{$item->title}}</a></h3>
                        
-                        <p>Located in the Cultural Triangle, Amaya Hills Kandy offers a hillside retreat overlooking Heerassagala Forest. Featuring traditional Sri Lankan architecture, it has an outdoor pool, a spa and a restaurant.
-
+                        <p class="pb-4">{{strip_tags($item->description)}}
                         </p>
                         <a href="{{url('accommodations/'.str_slug($item->title))}}" 
                             style="background-color : #fb9827;"

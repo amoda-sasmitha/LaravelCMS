@@ -27,6 +27,13 @@
     <div class="sidebar-heading pt-2">
         Functions
     </div>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url('home')}}" >
+            <i class="fa fa-chart-area"></i>
+            <span>Home</span>
+        </a>
+        
+    </li>
 
 
     <!-- Nav Item - Pages Collapse Menu -->
@@ -42,7 +49,7 @@
             </div>
         </div>
     </li>
-
+    
 
       <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
@@ -52,13 +59,8 @@
         </a>
         <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-<<<<<<< HEAD
-                <a class="collapse-item"  href="{{url('itineraries')}}"><span>List of Itineraries</span></a>
-                <a class="collapse-item" href="{{url('itineraries/create')}}">  <span>Add Itineraries</span></a>
-=======
                 <a class="collapse-item"  href="{{url('itinerary')}}"><span>List of Itineraries</span></a>
                 <a class="collapse-item" href="{{url('itinerary/create')}}">  <span>Add Itineraries</span></a>
->>>>>>> 58beab4735dc9cd5c9a5219132db2f95e5fb4726
             </div>
         </div>
     </li>

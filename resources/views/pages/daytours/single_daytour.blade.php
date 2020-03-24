@@ -166,6 +166,6 @@
  </div>
 </section>
 @endif
-@include('inc.booking')
+@include('inc.booking' , ['trip_id' => $daytour->id ])
 @include('inc.defaultfooter')
 @endsection

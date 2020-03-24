@@ -9,7 +9,7 @@ class Destinations extends Controller
 {
 
     public function index(){
-        $destinations = DestinationModel::orderBy('id' , 'asc')->paginate(1);
+        $destinations = DestinationModel::orderBy('id' , 'asc')->paginate(3);
         return view('pages.destinations.index')->with('destinations' , $destinations);
     }
 
@@ -67,5 +67,11 @@ class Destinations extends Controller
 
     
          return back()->with('success', "You post has been saved to database" );
+    }
+
+    public function destroy(Request $request){
+        $id=$request->input('id');
+        DestinationModel::destroy($id);
+        return back()->with('success', "You post has been deleted successfully" );
     }
 }

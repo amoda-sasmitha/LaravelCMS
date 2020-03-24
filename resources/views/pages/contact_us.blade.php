@@ -76,30 +76,36 @@
     
 
             <div class="col-lg-6 col-md-12 mt-3">
-                <form class="contact-form" style=" padding: 5px;">
+                @if(session('success'))
+                <div class="alert alert-success " role="alert">
+                    {{ session('success') }}
+                </div>   
+                @endif
+            <form class="contact-form" style=" padding: 5px;" method="POST" action="{{url('contactus')}}">
+                @csrf
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="uname" placeholder="Name" name="Name"
-                                    required="">
+                                <input type="text" class="form-control" id="uname" placeholder="Name" name="name"
+                                    required>
                             </div>
 
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <div class="form-group">
                                 <input type="email" class="form-control" id="pwd" placeholder="Email"
-                                    name="Email" required="">
+                                    name="email" required>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
                                 <input type="tel"  class="form-control" id="pwd" placeholder="Contact Number"
-                                    name="Email" required="">
+                                    name="phone" required>
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <textarea class="form-control" rows="5" id="comment"
-                                placeholder="Whats on your mind ? "></textarea>
+                            <textarea class="form-control" rows="5" id="comment" required
+                              name="notes"   placeholder="Whats on your mind ? "></textarea>
                         </div>
                     </div>
 

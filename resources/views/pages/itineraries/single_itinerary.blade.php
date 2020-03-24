@@ -196,5 +196,6 @@
      </div>
  </div>
 </section>
+@include('inc.booking', ['trip_id' => $itinerary->id ]))
 @include('inc.defaultfooter')
 @endsection

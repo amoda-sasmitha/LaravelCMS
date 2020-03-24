@@ -115,3 +115,9 @@ bottom   : 0;
 	margin-bottom: 15px;
 }
 
+.nowrap {
+    text-overflow: ellipsis !important; 
+    overflow: hidden !important; 
+    white-space: nowrap !important;
+}
+
