@@ -20,6 +20,9 @@ class Destinations extends Controller
     public function details($title){
         $title = str_replace('-',' ',$title); 
         $destination = DestinationModel::where('title' , $title)->first();
+        if(is_null($destination)){
+            abort(404);
+        }
         return view('pages.destinations.details')->with('destination' , $destination );
     }
 

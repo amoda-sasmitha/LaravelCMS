@@ -23,7 +23,8 @@ input[type=checkbox] {
 
         <!-- Content Row -->
 
-        <div>
+        <div id="form_errors">
+            
             @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <strong>Sorry!</strong> There were problems with your form data. <br><br>
@@ -46,7 +47,7 @@ input[type=checkbox] {
 
             <!-- Content Column -->
             <div class="col-12 mb-4">
-                <form method="post" action="{{url('itinerary')}}" enctype="multipart/form-data">
+                <form id="itinerary_form" method="post" action="{{url('itinerary')}}" enctype="multipart/form-data">
                     @csrf
                     <!-- Project Card Example -->
                     <div class="card shadow mb-3">
@@ -58,27 +59,27 @@ input[type=checkbox] {
                             <div class="row">
                                 <div class="col-md-8 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Itinerary Title </h3>
-                                    <input class="form-control"  name="title"
+                                    <input class="form-control"  name="title" id="title"
                                         placeholder="Ex : Adventure Tour in Sri Lanka " type="text">
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Trip Length </h3>
-                                    <input class="form-control"  name="length"
+                                    <input class="form-control"  name="length" id="length"
                                         placeholder="Ex : 14 days" type="text">
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Trip Price </h3>
-                                    <input class="form-control"  name="price"
+                                    <input class="form-control"  name="price" id="price"
                                         placeholder="Ex : Contact us for details" type="text">
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">When to Go </h3>
-                                    <input class="form-control"  name="whentogo"
+                                    <input class="form-control"  name="whentogo" id="whentogo"
                                         placeholder="Ex : Any time of the year" type="text">
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Transfers </h3>
-                                    <input class="form-control"  name="transfers"
+                                    <input class="form-control"  name="transfers" id="transfers"
                                         placeholder="Ex : Airport – Hotel – Tour attractions – Airport" type="text">
                                 </div>
                                 <div class="col-md-12 pb-3">
@@ -273,7 +274,7 @@ input[type=checkbox] {
                                     <img id="activity_one_image_preview"  style="pointer:cursor; !important" role="button" src="{{ URL::to('/') }}/images/system/upload.png" class="btn rounded img-fluid img-thumbnail" alt="...">
                                 </label>
                                 <input type="file" name="activity_one_image" id="activity_one_image" class="inputfile">
-                                <input class="form-control"  name="activity_one_text"
+                                <input class="form-control"  name="activity_one_text" id="activity_one_text"
                                     placeholder="Activity One Title" type="text">
                             </div>
                             {{-- Activity two  --}}
@@ -283,7 +284,7 @@ input[type=checkbox] {
                                     <img id="activity_two_image_preview"  style="pointer:cursor; !important" role="button" src="{{ URL::to('/') }}/images/system/upload.png" class="btn rounded img-fluid img-thumbnail" alt="...">
                                 </label>
                                 <input type="file" name="activity_two_image" id="activity_two_image" class="inputfile">
-                                <input class="form-control"  name="activity_two_text"
+                                <input class="form-control"  name="activity_two_text" id="activity_two_text"
                                     placeholder="Activity Two Title" type="text">
                             </div>
                             {{-- Activity three  --}}
@@ -293,7 +294,7 @@ input[type=checkbox] {
                                     <img id="activity_three_image_preview"  style="pointer:cursor; !important" role="button" src="{{ URL::to('/') }}/images/system/upload.png" class="btn rounded img-fluid img-thumbnail" alt="...">
                                 </label>
                                 <input type="file" name="activity_three_image" id="activity_three_image" class="inputfile">
-                                <input class="form-control"  name="activity_three_text"
+                                <input class="form-control"  name="activity_three_text" id="activity_three_text"
                                     placeholder="Activity Three Title" type="text">
                             </div>
                         </div>
@@ -313,7 +314,7 @@ input[type=checkbox] {
                                 </label>
                                 <input data-val="1" type="file" id="pys_image_1" name="picture_yourself_image[]"  class="inputfile">
                                 <textarea style="border: none;" class="form-control" name="picture_yourself_text[]"
-                                rows="2">Tell something about the itinerary</textarea>
+                                rows="2"></textarea>
                                 <button type="button"  class="delete btn btn-danger btn-sm btn-block"><b>Remove</b></button>
                             </div>
                         </div>
@@ -363,7 +364,7 @@ input[type=checkbox] {
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Leopard Holidays 2020</span>
         </div>
     </div>
 </footer>
@@ -552,7 +553,7 @@ init();
                 data +=  '<label class="mb-0" for="pys_image_'+ x +'">';               
                 data +=  '<img  id="image_preview_'+ x +'" src="{{ URL::to('/') }}/images/system/upload.png"  class=" btn img-fluid" data-val="'+x+'" ></label>';                
                 data +=  '<input data-val="'+x+'" type="file" id="pys_image_'+ x +'" name="picture_yourself_image[]"  class="inputfile">';                    
-                data +=  '<textarea style="border: none;" class="form-control" name="picture_yourself_text[]" rows="2">Tell something about the itinerary</textarea>';                   
+                data +=  '<textarea style="border: none;" class="form-control" name="picture_yourself_text[]" rows="2"></textarea>';                   
                 data +=  '<button type="button" class="delete btn btn-danger btn-sm btn-block"><b>Remove</b></button></div>';                
         
                 $(wrapper).append(data); //add input box
@@ -585,6 +586,119 @@ init();
 
 
       
+});
+
+
+$('#itinerary_form').on('submit', function() {
+        var count = 0;
+        var errors = [];
+        var form = $("#form_errors");
+
+        if(!$.trim( $('#title').val() ) ){
+            errors.push("Title is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#length').val() ) ){
+            errors.push("Trip length is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#price').val() ) ){
+            errors.push("Trip price is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#whentogo').val() ) ){
+            errors.push("When to go is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#transfers').val() ) ){
+            errors.push("Transfers is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#classic-ckeditor5').val() ) ){
+            errors.push("Description is required")
+            count++ 
+        }
+
+        if( $('#cover').get(0).files.length == 0 ){
+            errors.push("Cover image required")
+            count++ 
+        } 
+
+        var type = $("input[name='type[]']").serializeArray();
+        if( type.length == 0  ){
+            errors.push("At least one type required")
+            count++ 
+        } 
+
+        var looking_for = $("input[name='looking_for[]']").serializeArray();
+        if( looking_for.length == 0  ){
+            errors.push("At least one looking for tag is required")
+            count++ 
+        } 
+
+        var places = $("input[name='places[]']").serializeArray();
+        if( places.length == 0  ){
+            errors.push("At least one place tag is required")
+            count++ 
+        } 
+        var accommodations = $("input[name='accommodations[]']").serializeArray();
+        if( accommodations.length == 0  ){
+            errors.push("At least one accommodations tag is required")
+            count++ 
+        } 
+
+        if( $('#activity_one_image').get(0).files.length == 0 ){
+            errors.push("Activity one image is required")
+            count++ 
+        } 
+
+        if( $('#activity_two_image').get(0).files.length == 0 ){
+            errors.push("Activity two image is required")
+            count++ 
+        } 
+
+        if( $('#activity_three_image').get(0).files.length == 0 ){
+            errors.push("Activity three image is required")
+            count++ 
+        } 
+
+        if(!$.trim( $('#activity_one_text').val() ) ){
+            errors.push("Activity one text is required")
+            count++ 
+        }
+       
+        if(!$.trim( $('#activity_two_text').val() ) ){
+            errors.push("Activity two text is required")
+            count++ 
+        }
+       
+        if(!$.trim( $('#activity_three_text').val() ) ){
+            errors.push("Activity three text is required")
+            count++ 
+        }
+       
+
+        //----
+        form.empty();
+        form.removeClass('alert alert-danger');
+        
+        if(count > 0 ){
+            form.addClass('alert alert-danger');
+            var list = form.append('<ul></ul>').find('ul');
+            errors.forEach(error => {
+                list.append(`<li><b>${error}</b></li>`);
+            });
+           
+           return false; 
+        }else{
+           return true;
+        }
+       
 });
 </script>
 <style>

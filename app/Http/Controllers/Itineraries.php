@@ -31,6 +31,10 @@ class Itineraries extends Controller
     public function single_itinerary($title){
         $title = str_replace('-',' ',$title); 
         $itinerary =  ItineraryModel::where('title' , $title)->first();
+
+        if(is_null($itinerary)){
+            abort(404);
+        }
         
         $places =  DB::table('places')
                         ->join('accommodations', 'places.accommodation_id', '=', 'accommodations.id')
@@ -49,29 +53,6 @@ class Itineraries extends Controller
 
     public function store(Request $request)
     {
-        // $validatedData = $request->validate([
-        //     'title' => 'required',
-        //     'length' => 'required',
-        //      'price' => 'required',
-        //     'whentogo' => 'required',
-        //     'transfers' => 'required',
-        //     'description' => 'required',
-
-        //     'type' => 'required',
-        //     'looking_for' => 'required',
-        //     'places' => 'required',
-
-        //     'activity_one_image' => 'required',
-        //     'activity_one_text' => 'required',
-        //     'activity_two_image' => 'required',
-        //     'activity_two_text' => 'required',
-        //     'activity_three_image' => 'required',
-        //     'activity_three_text' => 'required',
-        //     //'picture_yourself_texts.*' => 'required', 
-        //    // 'accommodations.*' => 'required', 
-        //      'picture_yourself_images.*' => 'mimes:png,jpg,jpeg,gif|max:1024',      
-        //     'cover' => 'mimes:png,jpg,jpeg,gif|required|max:3000'
-        // ]);
 
         if($request->hasfile('picture_yourself_image'))
          {
@@ -140,6 +121,9 @@ class Itineraries extends Controller
 
         $tripid = $itinerary->id;
 
+
+        if( $request->filled('picture_yourself_text') ) {
+            if( $request->picture_yourself_text[0] != null ){
         //picture yourself table
         foreach ( $request->picture_yourself_text as $key => $picture) {
               $pus = new PictureYourself;
@@ -148,6 +132,9 @@ class Itineraries extends Controller
               $pus->image = $picture_yourself[$key];
               $pus->save();
         }
+
+       }
+    }
 
         //places table
         foreach ( $request->accommodations as $accommodation) {

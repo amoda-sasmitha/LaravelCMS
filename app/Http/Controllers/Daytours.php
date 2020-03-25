@@ -24,6 +24,10 @@ class Daytours extends Controller
      public function single_daytour($title){
         $title = str_replace('-',' ',$title); 
         $daytour =  DaytoursModel::where('title',$title)->first(); 
+
+        if(is_null($daytour)){
+            abort(404);
+        }
         $picture_yourself =  PictureYourself::where([ ['trip_id', '=' ,$daytour->id]])->get(); 
         $tourplan =  DB::table('trip_plans')
                      ->join('plan_details', 'trip_plans.id', '=', 'plan_details.trip_plan_id')
@@ -134,6 +138,8 @@ class Daytours extends Controller
 
         $tripid = $daytour->id;
 
+        if( $request->filled('picture_yourself_text') ) {
+            if( $request->picture_yourself_text[0] != null ){
         //picture yourself table
         foreach ( $request->picture_yourself_text as $key => $picture) {
               $pus = new PictureYourself;
@@ -142,6 +148,7 @@ class Daytours extends Controller
               $pus->image = $picture_yourself[$key];
               $pus->save();
         }
+    }}
 
         return back()->with('success', "You post has been saved to database" );
     }

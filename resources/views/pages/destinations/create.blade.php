@@ -18,7 +18,7 @@
 
         <!-- Content Row -->
 
-        <div>
+        <div id="form_errors">
             @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <strong>Sorry!</strong> There were problems with your form data.<br><br>
@@ -48,12 +48,12 @@
                         <h6 class="m-0 font-weight-bold text-primary">Add Destination</h6>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{url('destination')}}" enctype="multipart/form-data">
+                        <form id="des_form" method="post" action="{{url('destination')}}" enctype="multipart/form-data">
                         @csrf
                             <div class="row">
                                 <div class="col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Destination Title </h3>
-                                    <input class="form-control" id="exampleAccount" name="title"
+                                    <input class="form-control" id="title" name="title"
                                         placeholder="Ex : Sigiriya " type="text">
                                 </div>
                                 <div class="col-sm-6 pb-3">
@@ -118,7 +118,7 @@
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Your Website 2019</span>
+                <span>Copyright &copy; Leopard Holidays 2020</span>
             </div>
         </div>
     </footer>
@@ -232,6 +232,48 @@
 
 
     });
+
+    $('#des_form').on('submit', function() {
+        var count = 0;
+        var errors = [];
+        var form = $("#form_errors");
+
+        if(!$.trim( $('#title').val() ) ){
+            errors.push("Title is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#classic-ckeditor5').val() ) ){
+            errors.push("Description is required")
+            count++ 
+        }
+
+        if( $('#images').get(0).files.length == 0 ){
+            errors.push("At least one image required")
+            count++ 
+        } 
+
+        if( $('#cover').get(0).files.length == 0 ){
+            errors.push("Cover image required")
+            count++ 
+        } 
+
+        //----
+        form.empty();
+        form.removeClass('alert alert-danger');
+        
+        if(count > 0 ){
+            form.addClass('alert alert-danger');
+            var list = form.append('<ul></ul>').find('ul');
+            errors.forEach(error => {
+                list.append(`<li><b>${error}</b></li>`);
+            });
+           return false; 
+        }else{
+           return true;
+        }
+       
+});
 
 </script>
 <style>

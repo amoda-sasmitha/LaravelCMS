@@ -21,6 +21,11 @@ class MainController extends Controller
     public function single_accommodation($title){
         $title = str_replace('-',' ',$title); 
         $accommodation =  Accommodation::where('title',$title)->first(); 
+
+        if(is_null($accommodation)){
+            abort(404);
+        }
+
         $related =  Accommodation::where([ ['category', '=' ,$accommodation->category] , [ 'id' , '!=' , $accommodation->id]])->limit(3)->get(); 
         return view('pages.accommodation.single_accommodation')->with( ['accommodation' => $accommodation , 'related'=> $related] );
      }
@@ -37,14 +42,14 @@ class MainController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-             'images' => 'required',
-            'cover' => 'required',
-            'images.*' => 'mimes:png,jpg,jpeg,gif|max:2048',      
-            'cover' => 'mimes:png,jpg,jpeg,gif|required|max:5000'
-        ]);
+        // $validatedData = $request->validate([
+        //     'title' => 'required',
+        //     'description' => 'required',
+        //      'images' => 'required',
+        //     'cover' => 'required',
+        //     'images.*' => 'mimes:png,jpg,jpeg,gif|max:2048',      
+        //     'cover' => 'mimes:png,jpg,jpeg,gif|required|max:5000'
+        // ]);
 
         if($request->hasfile('images'))
          {

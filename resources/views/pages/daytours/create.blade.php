@@ -26,7 +26,7 @@ input[type=checkbox] {
 
         <!-- Content Row -->
 
-        <div>
+        <div id="form_errors">
             @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">×</button>	
@@ -51,7 +51,7 @@ input[type=checkbox] {
 
             <!-- Content Column -->
             <div class="col-12 mb-4">
-                <form method="post" action="{{url('daytour')}}" enctype="multipart/form-data">
+                <form id="daytour_form" method="post" action="{{url('daytour')}}" enctype="multipart/form-data">
                     @csrf
                     <!-- Project Card Example -->
                     <div class="card shadow mb-3">
@@ -63,27 +63,27 @@ input[type=checkbox] {
                             <div class="row">
                                 <div class="col-md-8 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Day Tour Title </h3>
-                                    <input class="form-control"  name="title" value="{{old('title')}}"
+                                    <input class="form-control" id="title"  name="title" value="{{old('title')}}"
                                         placeholder="Ex : Adventure Tour in Sri Lanka " type="text">
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Transfers </h3>
-                                    <input class="form-control"  name="transfers" value="{{old('transfers')}}"
+                                    <input class="form-control"  id="transfers"  name="transfers" value="{{old('transfers')}}"
                                         placeholder="Ex : Airport – Hotel – Tour attractions – Airport" type="text">
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Is This For Me? </h3>
-                                    <textarea class="form-control" name="is_this_for_me" value="{{old('is_this_for_me')}}"
+                                    <textarea class="form-control"  id="is_this_for_me" name="is_this_for_me" value="{{old('is_this_for_me')}}"
                                     rows="3">This tour is ideal for...</textarea>
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">Can It Be Tailor-Made? </h3>
-                                    <textarea class="form-control" name="can_it_be_tailor_made"  value="{{old('can_it_be_tailor_made')}}"
+                                    <textarea class="form-control"  id="can_it_be_tailor_made" name="can_it_be_tailor_made"  value="{{old('can_it_be_tailor_made')}}"
                                     rows="3">Yes, we can customize the tour for you...</textarea>
                                 </div>
                                 <div class="col-md-4 col-sm-12 pb-3">
                                     <h3 class="small font-weight-bold">When to Go </h3>
-                                    <textarea class="form-control" name="whentogo" value="{{old('whentogo')}}"
+                                    <textarea class="form-control" id="whentogo"  name="whentogo" value="{{old('whentogo')}}"
                                     rows="3">Anytime of the year...</textarea>
                                 </div>
                                 
@@ -279,7 +279,7 @@ input[type=checkbox] {
                                     <img id="activity_one_image_preview"  style="pointer:cursor; !important" role="button" src="{{ URL::to('/') }}/images/system/upload.png" class="btn rounded img-fluid img-thumbnail" alt="...">
                                 </label>
                                 <input type="file" name="activity_one_image" id="activity_one_image" class="inputfile">
-                                <input class="form-control"  name="activity_one_text" description
+                                <input class="form-control" id="activity_one_text"  name="activity_one_text" description
                                     placeholder="Activity One Title" type="text">
                             </div>
                             {{-- Activity two  --}}
@@ -288,8 +288,8 @@ input[type=checkbox] {
                                 <label style="pointer:cursor !important" class="mb-0" for="activity_two_image">
                                     <img id="activity_two_image_preview"  style="pointer:cursor; !important" role="button" src="{{ URL::to('/') }}/images/system/upload.png" class="btn rounded img-fluid img-thumbnail" alt="...">
                                 </label>
-                                <input type="file" name="activity_two_image" id="activity_two_image" class="inputfile">
-                                <input class="form-control"  name="activity_two_text"
+                                <input type="file" id="activity_two_image" name="activity_two_image" id="activity_two_image" class="inputfile">
+                                <input class="form-control"  name="activity_two_text" id="activity_two_text"
                                     placeholder="Activity Two Title" type="text">
                             </div>
                             {{-- Activity three  --}}
@@ -299,7 +299,7 @@ input[type=checkbox] {
                                     <img id="activity_three_image_preview"  style="pointer:cursor; !important" role="button" src="{{ URL::to('/') }}/images/system/upload.png" class="btn rounded img-fluid img-thumbnail" alt="...">
                                 </label>
                                 <input type="file" name="activity_three_image" id="activity_three_image" class="inputfile">
-                                <input class="form-control"  name="activity_three_text"
+                                <input class="form-control"  id="activity_three_text" name="activity_three_text"
                                     placeholder="Activity Three Title" type="text">
                             </div>
                         </div>
@@ -319,7 +319,7 @@ input[type=checkbox] {
                                 </label>
                                 <input data-val="1" type="file" id="pys_image_1" name="picture_yourself_image[]"  class="inputfile">
                                 <textarea style="border: none;" class="form-control" name="picture_yourself_text[]"
-                                rows="2">Tell something about this</textarea>
+                                rows="2"></textarea>
                                 <button type="button"  class="delete btn btn-danger btn-sm btn-block"><b>Remove</b></button>
                             </div>
                         </div>
@@ -350,7 +350,7 @@ input[type=checkbox] {
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Leopard Holidays 2020</span>
         </div>
     </div>
 </footer>
@@ -539,7 +539,7 @@ init();
                 data +=  '<label class="mb-0" for="pys_image_'+ x +'">';               
                 data +=  '<img  id="image_preview_'+ x +'" src="{{ URL::to('/') }}/images/system/upload.png"  class=" btn img-fluid" data-val="'+x+'" ></label>';                
                 data +=  '<input data-val="'+x+'" type="file" id="pys_image_'+ x +'" name="picture_yourself_image[]"  class="inputfile">';                    
-                data +=  '<textarea style="border: none;" class="form-control" name="picture_yourself_text[]" rows="2">Tell something about this</textarea>';                   
+                data +=  '<textarea style="border: none;" class="form-control" name="picture_yourself_text[]" rows="2"></textarea>';                   
                 data +=  '<button type="button" class="delete btn btn-danger btn-sm btn-block"><b>Remove</b></button></div>';                
         
                 $(wrapper).append(data); //add input box
@@ -572,6 +572,114 @@ init();
 
 
       
+});
+
+$('#daytour_form').on('submit', function() {
+        var count = 0;
+        var errors = [];
+        var form = $("#form_errors");
+
+        if(!$.trim( $('#title').val() ) ){
+            errors.push("Title is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#is_this_for_me').val() ) ){
+            errors.push("Is this for me field required")
+            count++ 
+        }
+
+        if(!$.trim( $('#can_it_be_tailor_made').val() ) ){
+            errors.push("Can it be tailor made field required")
+            count++ 
+        }
+
+        if(!$.trim( $('#whentogo').val() ) ){
+            errors.push("When to go is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#transfers').val() ) ){
+            errors.push("Transfers is required")
+            count++ 
+        }
+
+        if(!$.trim( $('#classic-ckeditor5').val() ) ){
+            errors.push("Description is required")
+            count++ 
+        }
+
+        if( $('#cover').get(0).files.length == 0 ){
+            errors.push("Cover image required")
+            count++ 
+        } 
+
+        var type = $("input[name='type[]']").serializeArray();
+        if( type.length == 0  ){
+            errors.push("At least one type required")
+            count++ 
+        } 
+
+        var looking_for = $("input[name='looking_for[]']").serializeArray();
+        if( looking_for.length == 0  ){
+            errors.push("At least one looking for tag is required")
+            count++ 
+        } 
+
+        var places = $("input[name='places[]']").serializeArray();
+        if( places.length == 0  ){
+            errors.push("At least one place tag is required")
+            count++ 
+        } 
+      
+
+        if( $('#activity_one_image').get(0).files.length == 0 ){
+            errors.push("Activity one image is required")
+            count++ 
+        } 
+
+        if( $('#activity_two_image').get(0).files.length == 0 ){
+            errors.push("Activity two image is required")
+            count++ 
+        } 
+
+        if( $('#activity_three_image').get(0).files.length == 0 ){
+            errors.push("Activity three image is required")
+            count++ 
+        } 
+
+        if(!$.trim( $('#activity_one_text').val() ) ){
+            errors.push("Activity one text is required")
+            count++ 
+        }
+       
+        if(!$.trim( $('#activity_two_text').val() ) ){
+            errors.push("Activity two text is required")
+            count++ 
+        }
+       
+        if(!$.trim( $('#activity_three_text').val() ) ){
+            errors.push("Activity three text is required")
+            count++ 
+        }
+       
+
+        //----
+        form.empty();
+        form.removeClass('alert alert-danger');
+        
+        if(count > 0 ){
+            form.addClass('alert alert-danger');
+            var list = form.append('<ul></ul>').find('ul');
+            errors.forEach(error => {
+                list.append(`<li><b>${error}</b></li>`);
+            });
+           
+           return false; 
+        }else{
+           return true;
+        }
+       
 });
 </script>
 <style>
