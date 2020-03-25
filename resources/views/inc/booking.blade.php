@@ -1,4 +1,4 @@
-<section class="pb-4  pt-4 bg-gray">
+<section id="bookingform" class="pb-4  pt-4 bg-gray">
     <div class="container">
         <div class="row px-md-5">
             <div class="col-lg-12">

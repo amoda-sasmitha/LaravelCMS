@@ -1,5 +1,5 @@
 @extends('layouts.defaultapp')
-@section('title','Discover Sri Lanka')
+@section('title','Itineraries')
 @section('content')
 @include('inc.defaultnavbar')
 <!-- Banner-area -->

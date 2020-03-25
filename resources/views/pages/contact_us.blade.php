@@ -109,7 +109,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn-1" style="background-color: #fb9827 ;color:white;  box-shadow: 1px 2px #b1aeae;">Send</button>
+                    <button type="submit" class="btn-1" style="background-color: #fb9827 ;color:white;   box-shadow: 0px 0px 19px 5px rgba(181, 181, 181, 0.6);">Send</button>
                 </form>
             </div>
             <div class="col-lg-6 col-md-12">

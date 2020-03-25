@@ -88,7 +88,7 @@
 </section> -->
 <!-- End-offer-section -->
 <!-- Partner-section -->
-<section class=" bg-white pb-5 pt-3">
+<!-- <section class=" bg-white pb-5 pt-3">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- End-Partner-section -->
 @include('inc.defaultfooter')
 

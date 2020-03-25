@@ -68,7 +68,7 @@
                  </li>
                  <li class="list-group-item">
                      <h6 class="m-0 pt-1 text-dark"><b>Want to Join ?</b></h6>
-                     <button class="mt-2 btn btn-success btn-sm px-4"><b>Book Now</b></button>
+                     <button  class="mt-2 btn btn-success btn-sm px-4"><b > <a href="#bookingform">Book Now </a></b></button>
                  </li>
              </ul>
          </div>
