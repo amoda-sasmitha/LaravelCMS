@@ -1,5 +1,5 @@
 <!-- Preloader -->
-<div id="preloader"></div>
+<!-- <div id="preloader"></div> -->
 <!-- Start-Header-Section -->
 <header>
      <!-- Topbar-start-area -->
