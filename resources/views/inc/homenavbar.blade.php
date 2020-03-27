@@ -92,7 +92,7 @@
         
         background-color:black;
         opacity: 0.7;
-        height: 40px;
+        height: 50px;
         padding: 0px !important;
         bottom: 0px;
         width: 100%;
@@ -177,7 +177,7 @@
                     <div class="topbar-icon">
                         <ul>
                             <!-- <li><a href="#"><i class="fab fa-behance"></i></a></li> -->
-                            <li><a href="https://www.instagram.com/leopardholidayssrilanka"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.instagram.com/leopardholidayssrilanka" target="_blank"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="https://www.facebook.com/leopardholidays/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="https://www.tripadvisor.com/Attraction_Review-g293962-d14149925-Reviews-Leopard_Holidays-Colombo_Western_Province.html" target="_blank"><i class="fab fa-tripadvisor"></i></a></li>
                         </ul>
