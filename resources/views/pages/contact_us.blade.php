@@ -27,19 +27,52 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 ">
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
                 <div class="contact-box">
                     <div class="icon-box">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="con-diss">
                         <h4> Address </h4>
-                        <p> No. 369/1, Pahala Kosgama, Kosgama, Colombo, Sri Lanka. </p>
+                        <p style="margin: 0px ; font-size: 14px;" > Leopard Holidays (Pvt) Limited </p>
+                        <p  style="margin: 0px ; font-size: 14px"> No : 98 B, De Mel Watte Road, Nawala, </p>
+                        <p  style="margin: 0px; font-size: 14px"> Koswatta, Colombo, Sri Lanka. </p>
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+                <div class="contact-box">
+                <a href="http://www.leopardholidays.com/">
+                    <div class="icon-box">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="con-diss">
+                        <h4> Website </h4>
+                        <p style="margin: 0px ; font-size: 14px" > www.leopardholidays.com </p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+                <div class="contact-box">
+                <a href="mailto:info@leopardholidays.com">
+                    <div class="icon-box">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="con-diss">
+                        <h4> Email </h4>
+                        <p style="margin: 0px ; font-size: 14px" > info@leopardholidays.com</p>
+                    </div>
+                     </a>
+                </div>
+            </div>
             <!-- item -->
-            <div class="col-lg-4 col-md-6 col-sm-12 ">
+            <!-- <div class="col-lg-4 col-md-6 col-sm-12 ">
                 <a href="tel:+94777300852" >
                 <div class="contact-box">
                     <div class="icon-box">
@@ -52,19 +85,19 @@
                     </a>
                     
                 </div>
-            </div>
+            </div> -->
             <!-- item -->
           
             <!-- item -->
-            <div class="col-lg-4 col-md-6 col-sm-12 ">
-                <a href="tel:+94777300852" >
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+                <a href="tel:+94777999223" >
                 <div class="contact-box">
                     <div class="icon-box">
                         <i class="fas fa-phone"></i>
                     </div>
                     <div class="con-diss">
                         <h4> Hotline </h4>
-                        <p>+94 77 79 99 223 </p>
+                        <p style="margin: 0px ; font-size: 14px" >+94 77 79 99 223 </p>
                     </div>
                     </a>
 
@@ -117,7 +150,7 @@
 
                 <div class="map mt-2"   title="name">
                     <!-- newly added map  -->
-                    <div class="mapouter " style="width: 100%;"><div  style="width: 500px !important;" class="gmap_canvas"><iframe width="100%"  height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=pahala%20kosgama&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:644px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:644px;}</style></div>
+                    <div class="mapouter " style="width: 100%;"><div   class="gmap_canvas"><iframe width="100%"  height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=pahala%20kosgama&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:644px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div>
                     <!-- newly added map  -->
 
                 </div>

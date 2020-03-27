@@ -16,10 +16,9 @@
                  </ul>
                 <div class="topbar-icon">
                     <ul>
-                        <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-google"></i></a></li>
+                    <li><a href="https://www.instagram.com/leopardholidayssrilanka"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/leopardholidays/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.tripadvisor.com/Attraction_Review-g293962-d14149925-Reviews-Leopard_Holidays-Colombo_Western_Province.html" target="_blank"><i class="fab fa-tripadvisor"></i></a></li>
                     </ul>
                 </div>
             </div>
