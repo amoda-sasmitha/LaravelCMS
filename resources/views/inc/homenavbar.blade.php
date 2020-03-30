@@ -219,6 +219,10 @@
                                      </li>
                                  </ul> --}}
                              </li>
+                             
+            <li class="nav-item {{ Request::is('tailor-made*') ? 'active' : '' }}">
+                <a class="nav-link text-dark" href="{{url('tailor-made/')}}">Tailor Made Tours </a>
+            </li>
                              {{-- <li class="nav-item ">
                                  <a class="nav-link text-dark" href="#">Special Offers </a>
                                  

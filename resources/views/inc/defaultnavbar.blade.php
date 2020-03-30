@@ -52,6 +52,10 @@
             <li class="nav-item {{ Request::is('discover-sri-lanka*') ? 'active' : '' }}">
                 <a class="nav-link " href="{{url('discover-sri-lanka/')}}">Discover Sri Lanka </a>
             </li>
+
+            <li class="nav-item {{ Request::is('tailor-made*') ? 'active' : '' }}">
+                <a class="nav-link " href="{{url('tailor-made/')}}">Tailor Made Tours </a>
+            </li>
             {{-- <li class="nav-item">
                 <a class="nav-link " href="#">Special Offers </a>
             </li> --}}

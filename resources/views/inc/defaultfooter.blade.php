@@ -12,7 +12,11 @@
                         <tr>
                             {{-- <td class="p-0.5 "> <a href=""  style="color: white; font-size: 0.75rem;"> Explore The Site  </a></td> --}}
                             <td class="p-0.5 "> <a href="{{url('/accommodations')}}" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
-
+                           
+                        </tr>
+                        <tr>
+                           
+                            <td class="p-0.5 "> <a href="{{url('tailor-made/')}}" style="color: white; font-size: 0.75rem;">Tailor Made Tours </a></td>
                         </tr>
                         <tr>
                             <td class="p-0.5 "> <a href="{{url('/itineraries')}}" style="color: white; font-size: 0.75rem;">Itineraries </a></td>
@@ -89,6 +93,7 @@
                 <tr>
                     <td class="p-0.5 "> <a href="{{url('/accommodations')}}" style="color: white; font-size: 0.75rem;">Accommodation </a> </td>
                 </tr>
+               
                 <tr>
                     <td class="p-0.5 "> <a href="{{url('/itineraries')}}" style="color: white; font-size: 0.75rem;">Itineraries </a></td>
                 </tr>

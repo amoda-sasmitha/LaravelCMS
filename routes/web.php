@@ -74,6 +74,10 @@ Route::get( 'contact-us' , function(){
     return View::make('pages.contact_us');
 });
 
+Route::get( 'tailor-made' , function(){ 
+    return View::make('pages.tailormade.tailormade');
+});
+
 Auth::routes([
     'register' => false, // Registration Routes...
     'reset' => false, // Password Reset Routes...
