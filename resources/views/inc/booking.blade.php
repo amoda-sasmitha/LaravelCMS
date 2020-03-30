@@ -12,9 +12,9 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-8 col-sm-12 pb-3">
-                            <h3 class="small text-dark pb-2 font-weight-bold">Full Name </h3>
+                            <h3 class="small text-dark pb-2 font-weight-bold">Name </h3>
                             <input class="form-control"  name="name" 
-                                placeholder="Enter Full Name" type="text">
+                                placeholder="Name with initials" type="text">
                             <input class="form-control"  name="trip_id" 
                                     value="{{$trip_id ?? 0 }}" type="hidden">
                         </div>

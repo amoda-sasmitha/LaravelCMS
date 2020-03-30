@@ -37,7 +37,7 @@
               
               Join us on this journey of discovery, and let the Leopard holidays inspire you to visit this wonderful and exciting island that has brought joy to so many.
               
-              If you want to be featured in Leopard holidays, email us at  info@leopardholidays.com </p>
+              If you want to be featured in Leopard holidays, email us at  <b>info@leopardholidays.com </b></p>
               <!-- <div class="about-content">
               <a href="#" class="read-btn">Read More</a>
              </div> -->
