@@ -157,6 +157,7 @@
         font-size: 0.8rem !important;
         margin: 0px !important;
     }
+
     </style>
      <!-- Preloader -->
      <!-- {{-- <div id="preloader"></div> --}} -->
@@ -170,7 +171,7 @@
                 <div class="contact_wrapper_top">
                     <ul class="header_top_contact">
                                
-                        <a href="tel:+94777999223" > <i class="fab fa-whatsapp"></i> <li><i class="fa fa-phone" aria-hidden="true"></i> +94 77 79 99 223 </li> </a>
+                        <a href="tel:+94777999223" > <li>  <i class="fab fa-whatsapp" aria-hidden="true"></i> <i class="fa fa-phone" aria-hidden="true"></i> +94 77 79 99 223 </li></a>
                         <a href="mailto:info@leopardholidays.com">
                          <li><i class="fa fa-envelope" aria-hidden="true"></i>info@leopardholidays.com</li></a>
                      </ul>

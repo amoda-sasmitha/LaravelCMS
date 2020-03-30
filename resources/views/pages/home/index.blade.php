@@ -455,13 +455,13 @@
             <div class="col-lg-12">
                 <div class="client-slide">
                         <!-- item -->
-                     <div class="item">
+                     <!-- <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/featured-logo-tripadvicer.jpg" alt="">
                         </div>
-                    </div>
+                    </div> -->
                     <!-- item -->
-                    <div class="item">
+                    <!-- <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/booking.png" alt="">
                         </div>
@@ -476,7 +476,13 @@
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/national-geographic-traveler-logo.jpg" alt="">
                         </div>
+                    </div> -->
+                    <div class="item">
+                        <div class="img-wapper">
+                            <img src="{{ URL::to('/') }}/images/partners/trip2019.jpg" alt="">
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

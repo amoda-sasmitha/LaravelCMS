@@ -150,7 +150,7 @@
 
                 <div class="map mt-2"   title="name">
                     <!-- newly added map  -->
-                    <div class="mapouter " style="width: 100%;"><div   class="gmap_canvas"><iframe width="100%"  height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=pahala%20kosgama&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:644px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div>
+                    <div class="mapouter " style="width: 100%;"><div   class="gmap_canvas"><iframe width="100%"  height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=No%20%3A%2098%20B%2C%20De%20Mel%20Watte%20Road%2C%20Nawala%2C%20%20Koswatta%2C%20Colombo%2C%20Sri%20Lanka.&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:644px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div>
                     <!-- newly added map  -->
 
                 </div>
@@ -177,14 +177,19 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="client-slide">
+                <div class="item">
+                        <div class="img-wapper">
+                            <img src="{{ URL::to('/') }}/images/partners/trip2019.jpg" alt="">
+                        </div>
+                    </div>
                         <!-- item -->
-                     <div class="item">
+                     <!-- <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/featured-logo-tripadvicer.jpg" alt="">
                         </div>
-                    </div>
+                    </div> -->
                     <!-- item -->
-                    <div class="item">
+                    <!-- <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/booking.png" alt="">
                         </div>
@@ -199,7 +204,7 @@
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/national-geographic-traveler-logo.jpg" alt="">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -208,3 +213,6 @@
 <!-- End-Partner-section -->
 @include('inc.defaultfooter')
 @endsection
+
+
+<!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="606" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=No%20%3A%2098%20B%2C%20De%20Mel%20Watte%20Road%2C%20Nawala%2C%20%20Koswatta%2C%20Colombo%2C%20Sri%20Lanka.&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.org">embedgooglemap.org</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:606px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:606px;}</style></div> -->
