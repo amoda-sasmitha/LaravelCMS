@@ -189,7 +189,7 @@
                         </div>
                     </div> -->
                     <!-- item -->
-                    <!-- <div class="item">
+                    <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/booking.png" alt="">
                         </div>
@@ -204,7 +204,7 @@
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/national-geographic-traveler-logo.jpg" alt="">
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>

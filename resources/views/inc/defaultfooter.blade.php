@@ -121,7 +121,7 @@
             <div class="title mb-3">
                 <h3 style="color: white; font-size: 1rem;">Contact Us</h3>
             </div>
-            <p class="telephone mb-1"><a href="tel:+94777999223" style="color: white; font-size: 0.85rem; font-weight: 700;">+94 77 79 99 223</a></p>
+            <p class="telephone mb-1"><a href="tel:+94777999223" style="color: white; font-size: 0.85rem; font-weight: 700;">+94 777 999 223</a></p>
             <p class="email-add"><a href="mailto:info@leopardholidays.com" style="color: white; font-size: 0.85rem; font-weight: 700;">info@leopardholidays.com </a></p>
 
             <table>

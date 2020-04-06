@@ -207,7 +207,7 @@
             <div class="col-lg-12">
                 <div class="about-content">
                     <h2 style="text-align: center;">Make life easier with Leopard Holidays</h2>
-                    <p style="text-align: center;">Eliminate the stress and confusion of panning a holiday for you and your loved ones. Leopard Holidays Tours will arrange everything for you from the time you pack your bags and step out of your home until your holiday to Sri Lanka is complete and you get back home to your routine. From hotel accommodations to air and ground transportation, car rentals and tour packages, Blue Lanka Tours covers it all.</p>
+                    <p style="text-align: center;">Eliminate the stress and confusion of panning a holiday for you and your loved ones. Leopard Holidays Tours will arrange everything for you from the time you pack your bags and step out of your home until your holiday to Sri Lanka is complete and you get back home to your routine. From hotel accommodations to air and ground transportation, car rentals and tour packages, we covers it all.</p>
                     
                     <p class="mobilevirew_hide" style="text-align: center;">  Not only will we arrange various modes of transport and types of accommodation for you but you will also have the advantage of early booking discounts, special fares, hotel deals and travel advisories. Our strong working relationship with travel suppliers island-wide and the latest computer reservations technology that we make use of in our offices allows us to provide our clients with the most up-to-date and best value information.</p>
 
@@ -461,7 +461,7 @@
                         </div>
                     </div> -->
                     <!-- item -->
-                    <!-- <div class="item">
+                    <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/booking.png" alt="">
                         </div>
@@ -476,7 +476,7 @@
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/national-geographic-traveler-logo.jpg" alt="">
                         </div>
-                    </div> -->
+                    </div> 
                     <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/trip2019.jpg" alt="">

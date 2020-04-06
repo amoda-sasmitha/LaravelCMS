@@ -23,11 +23,12 @@
 <center>
  <!-- Star - thandpicked-itineraries -->
  <section class="handpicked-itineraries ws-section-spacing bg-white" style="padding-top: 20px; padding-bottom: 20px; max-width: 1200px">
-        <div class="container-fluid text-center ch_handpicked_text">
+        <div class="container-fluid ">
             <h2>Tailor-Made Sri Lanka Holidays</h2>
             <br>
          
-            <p style="line-height: 38px ">Leopard Holidays and our team of friendly consultants work tirelessly to create exciting Sri Lanka tailor-made holidays for guests who want to tour this beautiful island.
+            <p style="line-height: 34px; text-align: justify;
+            text-justify: inter-word; ">Leopard Holidays and our team of friendly consultants work tirelessly to create exciting Sri Lanka tailor-made holidays for guests who want to tour this beautiful island.
 
 Whether you are looking to explore Sri Lanka’s beaches, wildlife, birds, greenery, history, and culture or even the warm and friendly people of the rural areas, we have just the holiday package for you. Sri Lanka is currently the number one tourist destination and is renowned for its diverse landscapes. Whilst these are specialized packages mostly focusing on a few aspects of the country, we have also lined up a few itineraries that cover all these landscapes in one tour.
 
@@ -39,9 +40,9 @@ If any of our prepared itineraries are not meeting your requirements, we will gl
  </center>
  <section class="handpicked-itineraries ws-section-spacing bg-gray" style="padding-top: 50px">
  <div class="container-fluid text-center ch_handpicked_text">
-            <p style="font-size: 2rem">Get in Touch</p>
+            <h2 class="font-weight-bold text-dark ">Get in Touch</h2>
  </div>
- @include('inc.booking')
+ @include('inc.booking', ['trip_id' => 9999 ]))
  </section>
 
  <!-- Testimonial-section -->
@@ -151,13 +152,13 @@ If any of our prepared itineraries are not meeting your requirements, we will gl
             <div class="col-lg-12">
                 <div class="client-slide">
                         <!-- item -->
-                     <!-- <div class="item">
+                     {{-- <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/featured-logo-tripadvicer.jpg" alt="">
                         </div>
-                    </div> -->
+                    </div> --}}
                     <!-- item -->
-                    <!-- <div class="item">
+                   <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/booking.png" alt="">
                         </div>
@@ -172,7 +173,7 @@ If any of our prepared itineraries are not meeting your requirements, we will gl
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/national-geographic-traveler-logo.jpg" alt="">
                         </div>
-                    </div> -->
+                    </div> 
                     <div class="item">
                         <div class="img-wapper">
                             <img src="{{ URL::to('/') }}/images/partners/trip2019.jpg" alt="">
