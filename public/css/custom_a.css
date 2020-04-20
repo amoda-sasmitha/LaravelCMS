@@ -121,3 +121,12 @@ bottom   : 0;
     white-space: nowrap !important;
 }
 
+@media only screen and (max-width: 480px) {
+   
+   p { text-align: justify !important; 
+    text-justify: inter-word !important;
+   }
+}
+
+
+

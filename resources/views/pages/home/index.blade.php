@@ -158,9 +158,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 day_t_all mb-3"   >
+            <div class="col-lg-6 col-md-12 day_t_all mb-3"   >
               
-                <div class="col-lg-12 col-md-6 col-sm-12" style="background-image: url('{{ URL::to('/') }}/images/main/a.jpg');  height: 810px; background-repeat: no-repeat;"></div>
+                <div class="col-12 d-none d-lg-block d-xl-block" 
+                style="background-image: url('{{ URL::to('/') }}/images/main/a.jpg');  height: 810px; background-repeat: no-repeat;"></div>
               
                 <div class="day_tours_main_overlay">
 
@@ -172,7 +173,7 @@
                 <!-- <img src="images/abt-2.PNG" alt="about-2"> -->
                 <!-- <img src="./images/cimages/a.jpg" alt="about-2"> -->
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="row">
                     @if ( count($daytours) > 0 )
                     @foreach ($daytours as $item)   
@@ -500,7 +501,7 @@
                 <div class=" hm_contatcus_div call-us">
                     <img style="width: 50px; display: inline-block; position: absolute; left: 10px; top: 28px;" src="{{ URL::to('/') }}/images/contactus/call_us.png">
                     <h5>Talk to Us</h5>
-                    <p>(+94) 777 999 223</p>
+                    <p> <i class="fab fa-whatsapp"></i> (+94) 777 999 223</p>
                     <p>To find a local destination expert</p>
                 </div>
                </a>

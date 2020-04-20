@@ -97,7 +97,9 @@
                     </div>
                     <div class="con-diss">
                         <h4> Hotline </h4>
-                        <p style="margin: 0px ; font-size: 14px" >+94 77 79 99 223 </p>
+                       
+                        <p style="margin: 0px ; font-size: 14px" >
+                            <i class="fab fa-whatsapp"></i> +94 777 999 223 </p>
                     </div>
                     </a>
 
