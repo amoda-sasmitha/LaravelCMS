@@ -50,6 +50,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+
 //public accommodations
 Route::get('accommodations',  'MainController@list'  );
 Route::get('accommodations/{title}',  'MainController@single_accommodation'  );
