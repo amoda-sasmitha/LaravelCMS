@@ -160,8 +160,8 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 day_t_all mb-3"   >
               
-                <div class="col-12 d-none d-lg-block d-xl-block" 
-                style="background-image: url('{{ URL::to('/') }}/images/main/a.jpg');  height: 810px; background-repeat: no-repeat;"></div>
+                <div class="col-12 w-100" 
+                style="background-image: url('{{ URL::to('/') }}/images/main/d.jpg');  height: 810px; background-repeat: no-repeat;background-size : cover;"></div>
               
                 <div class="day_tours_main_overlay">
 
