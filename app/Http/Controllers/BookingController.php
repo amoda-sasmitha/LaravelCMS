@@ -25,7 +25,7 @@ class BookingController extends Controller
          $booking->no_adults = $request->input('adultcount');
          $booking->no_children = $request->input('childrencount');
          $booking->notes = $request->input('notes');    
-         Mail::to('amoda@konekt.lk')->send(new BookingMail($booking));
+         Mail::to('leopardholidays@gmail.com')->send(new BookingMail($booking));
          $booking->save();
          return back()->with('success', "You post has been saved to system, We will contact you soon" );
     }
@@ -38,7 +38,7 @@ class BookingController extends Controller
      $contactus->phone = $request->input('phone');
      $contactus->notes = $request->input('notes');
 
-     Mail::to('amoda@konekt.lk')->send(new ContactUsMail($contactus));
+     Mail::to('leopardholidays@gmail.com')->send(new ContactUsMail($contactus));
      $contactus->save();
      return back()->with('success', "You note has been saved to system, We will contact you soon" );
     }
